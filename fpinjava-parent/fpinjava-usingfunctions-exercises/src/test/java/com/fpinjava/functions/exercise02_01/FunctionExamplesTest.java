@@ -15,5 +15,7 @@ public class FunctionExamplesTest {
     assertEquals(Integer.valueOf(4), square.apply(2));
     assertEquals(Integer.valueOf(36), square.apply(triple.apply(2)));
     assertEquals(Integer.valueOf(27), compose(triple, square).apply(3));
+    assertEquals(Integer.valueOf(81), compose(square, triple).apply(3));
+    assertEquals(Integer.valueOf(144), compose(square, triple).apply(4));
   }
 }
